@@ -1,0 +1,6 @@
+﻿17HCB
+1, CTT011, Thiết kế giao diện, C32
+2, CTT012, Kiểm chứng phần mềm, C32
+18HCB
+1, CTT001, Lập trình ứng dụng Java, C31, 
+2, CTT002, Mạng máy tính, C31
