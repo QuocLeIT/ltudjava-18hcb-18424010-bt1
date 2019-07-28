@@ -21,18 +21,18 @@ public class Main {
      */
     
     public static void Menu(){
-    System.out.println("1. Import danh sách lớp");
+        System.out.println("1. Import danh sách lớp");
         System.out.println("2. Thêm 1 sv vào lớp 17HCB");
         System.out.println("3. Import thời khóa biểu");
-        System.out.println("4. ");
+        //System.out.println("4. Đăng ký/Hủy môn học");
         System.out.println("5. Xem danh sách lớp");//Lớp 18HCB, Lớp 18HCB-CTT001
         System.out.println("6. Xem lại thời khóa biểu 18HCB");
         System.out.println("7. Import bảng điểm 18HCB–CTT001");
         System.out.println("8. Xem lại bảng điểm");//Lớp 18HCB-CTT001, Cho biết ai đậu, ai rớt, Thống kê số lượng / phần trăm đậu / rớt
-        System.out.println("9. Sửa điểm 1 sinh viên");//Lớp 18HCB-CTT001, Sửa điểm sv Hồ Thị E thành 9 9 9 9
-        System.out.println("10. Chỉ được xem điểm của mình");//Bạn Hồ Thị E xem điểm môn Java của mình
-        System.out.println("11. Đăng nhập, đăng xuất");//Giáo vụ: giaovu/giaovu, Sinh viên: 1842001/1842001
-        System.out.println("12. Đổi mật khẩu");
+        //System.out.println("9. Sửa điểm 1 sinh viên");//Lớp 18HCB-CTT001, Sửa điểm sv Hồ Thị E thành 9 9 9 9
+        //System.out.println("10. Chỉ được xem điểm của mình");//Bạn Hồ Thị E xem điểm môn Java của mình
+        //System.out.println("11. Đăng nhập, đăng xuất");//Giáo vụ: giaovu/giaovu, Sinh viên: 1842001/1842001
+        //System.out.println("12. Đổi mật khẩu");
     }
     
     public static void MenuMain() {
