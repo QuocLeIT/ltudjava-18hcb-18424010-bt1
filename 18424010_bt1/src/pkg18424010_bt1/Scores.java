@@ -26,7 +26,7 @@ public class Scores {
         sumSco = 0;
     }
     
-    public Scores(String _mssv, String _name, String _cla, String _nameSub, float _gk, float _ck, float _sumSco){
+    public Scores(String _mssv, String _name, String _cla, String _nameSub, float _gk, float _ck, float _other, float _sumSco){
          mssv = _mssv.trim();
          name = _name.trim();
          cla = _cla.trim();
@@ -34,7 +34,7 @@ public class Scores {
          gk = _gk;
          ck = _ck;
          sumSco = _sumSco;
-         
+         other = _other;
      }
     
     public Scores(String _lop, String _row){
