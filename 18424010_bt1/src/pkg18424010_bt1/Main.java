@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import static pkg18424010_bt1.WriteReadScores.WriteGenericScores;
 
 /**
  *
@@ -29,7 +30,7 @@ public class Main {
         System.out.println("6. Xem lại thời khóa biểu 18HCB");
         System.out.println("7. Import bảng điểm 18HCB–CTT001");
         System.out.println("8. Xem lại bảng điểm");//Lớp 18HCB-CTT001, Cho biết ai đậu, ai rớt, Thống kê số lượng / phần trăm đậu / rớt
-        //System.out.println("9. Sửa điểm 1 sinh viên");//Lớp 18HCB-CTT001, Sửa điểm sv Hồ Thị E thành 9 9 9 9
+        System.out.println("9. Sửa điểm 1 sinh viên");//Lớp 18HCB-CTT001, Sửa điểm sv Hồ Thị E thành 9 9 9 9
         //System.out.println("10. Chỉ được xem điểm của mình");//Bạn Hồ Thị E xem điểm môn Java của mình
         //System.out.println("11. Đăng nhập, đăng xuất");//Giáo vụ: giaovu/giaovu, Sinh viên: 1842001/1842001
         //System.out.println("12. Đổi mật khẩu");
@@ -117,6 +118,17 @@ public class Main {
                   MenuMain();
               }
               break; 
+            case 9:
+              EditScores();
+                
+              System.out.println("\r\nCHỌN 1. Quay lại menu, 0. Để thoát");
+              back = input.nextInt();
+              if (back == 1)
+              {
+                  MenuMain();
+              }
+              break; 
+            
             default:
               // code block
           }
@@ -296,6 +308,45 @@ public class Main {
         
         System.out.println("Đậu: " + d + " - " + (d*100)/(d+r) + " %");  
         System.out.println("Rớt: " + r + " - " + (r*100)/(d+r)+ " %");  
+    }
+    
+    public static void EditScores(){
+        System.out.println("9. Sửa điểm 1 sinh viên Lớp 18HCB-CTT001, Sửa điểm sv Hồ Thị E thành 9 9 9 9");//
+        
+        Scores sco = new Scores("1742005", "Hồ Thị E", "18HCB", "CTT001", 9, 9, 9, 9);
+        
+        GenericStack<Scores> gs = new GenericStack<>();
+        gs = WriteReadScores.ReadScores();
+        
+        int i;
+        boolean t = false;
+        for (i = 0; i<= gs._data.size() - 1; i++)
+        {  
+            if ("﻿18HCB".equals(gs._data.get(i).cla.trim()) && "CTT001".equals(gs._data.get(i).nameSub.trim()) && "1742005".equals(gs._data.get(i).mssv.trim()) ){
+                gs._data.get(i).gk = 9;
+                gs._data.get(i).ck = 9;
+                gs._data.get(i).other = 9;
+                gs._data.get(i).sumSco = 9;
+                i = gs._data.size() - 1;
+                t = true;
+            }
+        }
+        
+        if (t){
+            boolean isWrite = WriteGenericScores(gs);
+            if (isWrite)
+           {
+               System.out.println("THÀNH CÔNG");
+           }
+           else
+           {
+               System.out.println("KHÔNG THÀNH CÔNG");
+           }
+        }else{
+            System.out.println("KHÔNG CÓ TÌM ĐƯỢC THÔNG TIN");
+        }
+        
+        
     }
     
     public static void main(String[] args) throws FileNotFoundException {
